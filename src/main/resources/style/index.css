@@ -1,0 +1,24 @@
+
+.root {
+    -fx-window-color: #adb5bd;
+    -fx-background-color: #e9ecef;
+}
+
+.label {
+    -fx-font-size: 4em;
+    -fx-text-alignment: center;
+    -fx-background-color: red;
+}
+
+.button {
+    -fx-background-color: #1c7ed6;
+    -fx-text-fill: #fff3bf;
+    -fx-font-size: 2em;
+    -fx-width: 8em;
+    -fx-height: 4em;
+}
+
+#vbox {
+    -fx-alignment: center;
+    -fx-background-color: green;
+}
