@@ -4,10 +4,19 @@
     -fx-background-color: #e9ecef;
 }
 
-.label {
+#gameTitle {
     -fx-font-size: 4em;
     -fx-text-alignment: center;
     -fx-background-color: red;
+}
+
+.sudoku_cell {
+    -fx-alignment: center;
+    -fx-pref-width: 66px;
+    -fx-pref-height: 66px;
+    -fx-font-size: 1em;
+    -fx-text-alignment: center;
+    -fx-border-color: #b5b8bb;
 }
 
 .button {
@@ -16,6 +25,10 @@
     -fx-font-size: 2em;
     -fx-width: 8em;
     -fx-height: 4em;
+}
+
+.chunk {
+    -fx-border-color: #00a0ff;
 }
 
 #vbox {

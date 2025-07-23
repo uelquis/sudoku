@@ -27,8 +27,8 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         primaryStage.setTitle("Sudoku");
-        primaryStage.setHeight(600);
-        primaryStage.setWidth(600);
+        primaryStage.setWidth(615);
+        primaryStage.setHeight(638);
         primaryStage.setResizable(false);
 
         //val indexStyleSheet = getClass().getResource("/style/index.css").toExternalForm();
