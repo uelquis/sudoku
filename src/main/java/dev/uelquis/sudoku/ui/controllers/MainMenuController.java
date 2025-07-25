@@ -5,14 +5,15 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import lombok.val;
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.function.Supplier;
 
 import static co.nstant.in.pipe.Pipe.apply;
 
@@ -23,12 +24,11 @@ public class MainMenuController implements Initializable {
     public Label gameTitle;
 
     public void startGame(ActionEvent event) {
-        val window = (Stage) ((Node) event.getTarget()).getScene().getWindow();
-        try {
+        goTo((Node) event.getTarget(), SceneBuilder::buildGameScene);
+    }
 
-            window.setScene(SceneBuilder.build().gameScene());
-
-        } catch (IOException e) { System.out.println(e.getMessage()); }
+    public void configGame(ActionEvent event) {
+        goTo((Node) event.getTarget(), SceneBuilder::buildConfigGameScene);
     }
 
     @FXML @Override
@@ -38,8 +38,12 @@ public class MainMenuController implements Initializable {
             .result()
             .get();
 
-        vbox.setPrefWidth(windowWidth);
+    }
 
+    private void goTo(Node node, Supplier<Scene> buildScene) {
+        val window = (Stage) node.getScene().getWindow();
+
+        window.setScene(buildScene.get());
     }
 }
 

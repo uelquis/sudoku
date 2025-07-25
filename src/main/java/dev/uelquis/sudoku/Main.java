@@ -35,7 +35,7 @@ public class Main extends Application {
 
         try {
 
-            val mainMenu = SceneBuilder.build().mainMenu();
+            val mainMenu = SceneBuilder.buildMainMenu();
 
             primaryStage.setScene(mainMenu);
 

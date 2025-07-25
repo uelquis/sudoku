@@ -9,17 +9,32 @@ import java.net.URL;
 public class SceneBuilder {
     private SceneBuilder() {}
 
-    public static SceneBuilder build() {
-        return new SceneBuilder();
+    private static URL getFXML(String name) { return  SceneBuilder.class.getResource(name); }
+
+    public static Scene buildMainMenu() throws IOException {
+        try {
+
+            return new Scene(FXMLLoader.load(getFXML("/MainMenu.fxml")));
+        } catch (IOException e) { System.out.println(e.getMessage()); }
+
+        return null;
     }
 
-    private URL getFXML(String name) { return  getClass().getResource(name); }
+    public static Scene buildGameScene() {
+        try {
 
-    public Scene mainMenu() throws IOException {
-        return new Scene(FXMLLoader.load(getFXML("/MainMenu.fxml")));
+            return new Scene(FXMLLoader.load(getFXML("/Game.fxml")));
+        } catch (IOException e) { System.out.println(e.getMessage()); }
+
+        return null;
     }
 
-    public Scene gameScene() throws IOException {
-        return new Scene(FXMLLoader.load(getFXML("/Game.fxml")));
+    public static Scene buildConfigGameScene() {
+        try {
+
+            return new Scene(FXMLLoader.load(getFXML("/ConfigGame.fxml")));
+        } catch (IOException e) { System.out.println(e.getMessage()); }
+
+        return null;
     }
 }

@@ -4,11 +4,35 @@
     -fx-background-color: #e9ecef;
 }
 
+/* Main menu */
+
 #gameTitle {
     -fx-font-size: 4em;
     -fx-text-alignment: center;
-    -fx-background-color: red;
 }
+
+#vbox {
+    -fx-alignment: center;
+    -fx-spacing: 1em
+}
+
+.start_game_btn {
+    -fx-background-color: #1c7ed6;
+    -fx-text-fill: #e9ecef;
+    -fx-font-size: 2em;
+    -fx-pref-width: 8em;
+    -fx-pref-height: 2em;
+}
+
+.config_btn {
+    -fx-background-color: #848689;
+    -fx-text-fill: #e9ecef;
+    -fx-font-size: 2em;
+    -fx-pref-width: 8em;
+    -fx-pref-height: 2em;
+}
+
+/* Game */
 
 .sudoku_cell {
     -fx-alignment: center;
@@ -19,19 +43,9 @@
     -fx-border-color: #b5b8bb;
 }
 
-.button {
-    -fx-background-color: #1c7ed6;
-    -fx-text-fill: #fff3bf;
-    -fx-font-size: 2em;
-    -fx-width: 8em;
-    -fx-height: 4em;
-}
+
 
 .chunk {
     -fx-border-color: #00a0ff;
 }
 
-#vbox {
-    -fx-alignment: center;
-    -fx-background-color: green;
-}
