@@ -17,7 +17,7 @@ import java.util.function.Supplier;
 
 import static co.nstant.in.pipe.Pipe.apply;
 
-public class MainMenuController implements Initializable {
+public final class MainMenuController implements Initializable {
     @FXML
     public VBox vbox;
     @FXML
@@ -25,10 +25,6 @@ public class MainMenuController implements Initializable {
 
     public void startGame(ActionEvent event) {
         goTo((Node) event.getTarget(), SceneBuilder::buildGameScene);
-    }
-
-    public void configGame(ActionEvent event) {
-        goTo((Node) event.getTarget(), SceneBuilder::buildConfigGameScene);
     }
 
     @FXML @Override

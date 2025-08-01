@@ -24,6 +24,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.javatuples</groupId>
+            <artifactId>javatuples</artifactId>
+            <version>1.2</version>
+        </dependency>
+        <dependency>
             <groupId>co.nstant.in</groupId>
             <artifactId>java-pipe</artifactId>
             <version>1.0.0</version>

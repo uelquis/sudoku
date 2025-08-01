@@ -24,16 +24,7 @@ public class SceneBuilder {
         try {
 
             return new Scene(FXMLLoader.load(getFXML("/Game.fxml")));
-        } catch (IOException e) { System.out.println(e.getMessage()); }
-
-        return null;
-    }
-
-    public static Scene buildConfigGameScene() {
-        try {
-
-            return new Scene(FXMLLoader.load(getFXML("/ConfigGame.fxml")));
-        } catch (IOException e) { System.out.println(e.getMessage()); }
+        } catch (IOException e) { System.out.printf("failed to get %s\n", e.getMessage()); }
 
         return null;
     }

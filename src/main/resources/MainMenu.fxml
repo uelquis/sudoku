@@ -10,7 +10,6 @@
     <VBox fx:id="vbox" prefHeight="240.0" prefWidth="600.0">
         <Label fx:id="gameTitle" text="Sudoku" />
         <Button onAction="#startGame" styleClass="start_game_btn" text="Play" />
-      <Button layoutX="272.0" layoutY="136.0" onAction="#configGame" styleClass="config_btn" text="Config" />
     </VBox>
 
 </AnchorPane>
