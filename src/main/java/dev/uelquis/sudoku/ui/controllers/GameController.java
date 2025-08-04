@@ -1,8 +1,10 @@
 package dev.uelquis.sudoku.ui.controllers;
 
+import static io.github.chrisdostert.guardclauses.Guards.guardThat;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.util.Pair;
@@ -24,7 +26,9 @@ public final class GameController implements Initializable, SudokuGame {
         val cell = (Node) event.getSource();
         val cellPos = getCellPosition(cell);
 
-        System.out.println(cellPos.getKey() + ":" + cellPos.getValue());
+        val c = (Label) getCellbyPosition(new Pair<>(cellPos.getKey() + 1, cellPos.getValue() + 1));
+
+        System.out.println(c.getText());
     }
 
     private Pair<Integer, Integer> offsetCellPosition(int offsetRow, int offsetColumn, Pair<Integer, Integer> pos) {
@@ -48,13 +52,13 @@ public final class GameController implements Initializable, SudokuGame {
         * */
 
         val chunkPosition = new Pair<>(
-            validateInteger(GridPane.getRowIndex(cell.getParent())),
-            validateInteger(GridPane.getColumnIndex(cell.getParent()))
+            this.validateInteger(GridPane.getRowIndex(cell.getParent())),
+            this.validateInteger(GridPane.getColumnIndex(cell.getParent()))
         );
 
         val cellPosition = new Pair<>(
-            validateInteger(GridPane.getRowIndex(cell)),
-            validateInteger(GridPane.getColumnIndex(cell))
+            this.validateInteger(GridPane.getRowIndex(cell)),
+            this.validateInteger(GridPane.getColumnIndex(cell))
         );
 
         if(chunkPosition.equals(_00.value)) {
@@ -89,5 +93,27 @@ public final class GameController implements Initializable, SudokuGame {
         else {
             return null;
         }
+    }
+
+    @Override
+    public Node getCellbyPosition(Pair<Integer, Integer> pos) {
+        guardThat("row position", pos.getKey())
+            .isGreaterThan(-1)
+            .isLessThan(9);
+
+        guardThat("column position", pos.getValue())
+            .isGreaterThan(-1)
+            .isLessThan(9);
+
+        for(Node chunk : this.sudokuGrid.getChildren()) {
+            for(Node cell : ((GridPane)chunk).getChildren()) {
+                if(!this.getCellPosition(cell).equals(pos)) continue;
+
+                return cell;
+
+            }
+        }
+
+        return null;
     }
 }

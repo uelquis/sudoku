@@ -3,8 +3,11 @@ package dev.uelquis.sudoku.ui.controllers;
 import javafx.scene.Node;
 import javafx.util.Pair;
 
+import java.util.ArrayList;
+import java.util.TreeSet;
+
 public sealed interface SudokuGame permits GameController {
-    
+
     enum ChunkPositions {
         _00(new Pair<>(0,0)),
         _01(new Pair<>(0,1)),
@@ -24,9 +27,9 @@ public sealed interface SudokuGame permits GameController {
             this.value = pos;
         }
     }
-    
+
     Pair<Integer, Integer> getCellPosition(Node cell);
 
-
+    Node getCellbyPosition(Pair<Integer, Integer> pos);
 
 }
