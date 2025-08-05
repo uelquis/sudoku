@@ -1,6 +1,5 @@
 package dev.uelquis.sudoku.ui.controllers;
 
-import static io.github.chrisdostert.guardclauses.Guards.guardThat;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -11,6 +10,7 @@ import javafx.util.Pair;
 import lombok.val;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 import static dev.uelquis.sudoku.ui.controllers.SudokuGame.ChunkPositions.*;
@@ -24,11 +24,24 @@ public final class GameController implements Initializable, SudokuGame {
 
     public void onCellClick(MouseEvent event) {
         val cell = (Node) event.getSource();
-        val cellPos = getCellPosition(cell);
+        val cellPos = this.getCellPosition(cell);
 
-        val c = (Label) getCellbyPosition(new Pair<>(cellPos.getKey() + 1, cellPos.getValue() + 1));
+        val row = this.getRowFromPosition(cellPos);
+        val column = this.getColumnFromPosition(cellPos);
 
-        System.out.println(c.getText());
+        row.forEach(c -> {
+
+            if(cellPos.equals(this.getCellPosition(c))) return;
+
+            ((Label)c).setStyle("-fx-background-color: #39FF4D;");
+        });
+
+        column.forEach(c -> {
+
+            if(cellPos.equals(this.getCellPosition(c))) return;
+
+            ((Label)c).setStyle("-fx-background-color: #FFF039;");
+        });
     }
 
     private Pair<Integer, Integer> offsetCellPosition(int offsetRow, int offsetColumn, Pair<Integer, Integer> pos) {
@@ -97,13 +110,11 @@ public final class GameController implements Initializable, SudokuGame {
 
     @Override
     public Node getCellbyPosition(Pair<Integer, Integer> pos) {
-        guardThat("row position", pos.getKey())
-            .isGreaterThan(-1)
-            .isLessThan(9);
+        if(pos.getKey() < 0 || pos.getKey() > 8)
+            throw new IllegalArgumentException("Row position must be between 0 and 8");
 
-        guardThat("column position", pos.getValue())
-            .isGreaterThan(-1)
-            .isLessThan(9);
+        if(pos.getValue() < 0 || pos.getValue() > 8)
+            throw new IllegalArgumentException("Column position must be between 0 and 8");
 
         for(Node chunk : this.sudokuGrid.getChildren()) {
             for(Node cell : ((GridPane)chunk).getChildren()) {
@@ -115,5 +126,37 @@ public final class GameController implements Initializable, SudokuGame {
         }
 
         return null;
+    }
+
+    @Override
+    public ArrayList<Node> getRowFromPosition(Pair<Integer, Integer> pos) {
+        val row = new ArrayList<Node>();
+        val positions = new ArrayList<Pair<Integer, Integer>>();
+
+        for (int column = 0; column < 9; column++) {
+            positions.add(new Pair<>(pos.getKey(), column));
+        }
+
+        positions.forEach(position -> {
+            row.add(this.getCellbyPosition(position));
+        });
+
+        return row;
+    }
+
+    @Override
+    public ArrayList<Node> getColumnFromPosition(Pair<Integer, Integer> pos) {
+        val column = new ArrayList<Node>();
+        val positions = new ArrayList<Pair<Integer, Integer>>();
+
+        for (int row = 0; row < 9; row++) {
+            positions.add(new Pair<>(row, pos.getValue()));
+        }
+
+        positions.forEach(position -> {
+            column.add(this.getCellbyPosition(position));
+        });
+
+        return column;
     }
 }

@@ -4,7 +4,6 @@ import javafx.scene.Node;
 import javafx.util.Pair;
 
 import java.util.ArrayList;
-import java.util.TreeSet;
 
 public sealed interface SudokuGame permits GameController {
 
@@ -32,4 +31,7 @@ public sealed interface SudokuGame permits GameController {
 
     Node getCellbyPosition(Pair<Integer, Integer> pos);
 
+    ArrayList<Node> getRowFromPosition(Pair<Integer, Integer> pos);
+
+    ArrayList<Node> getColumnFromPosition(Pair<Integer, Integer> pos);
 }

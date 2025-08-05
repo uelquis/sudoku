@@ -13,7 +13,6 @@
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <javafx.version>21.0.7</javafx.version>
-        <guard-clauses-for-java.version>0.0.10240571</guard-clauses-for-java.version>
     </properties>
 
     <repositories>
@@ -24,11 +23,6 @@
     </repositories>
 
     <dependencies>
-        <dependency>
-            <groupId>io.github.chrisdostert</groupId>
-            <artifactId>guard-clauses-for-java</artifactId>
-            <version>${guard-clauses-for-java.version}</version>
-        </dependency>
         <dependency>
             <groupId>org.javatuples</groupId>
             <artifactId>javatuples</artifactId>
