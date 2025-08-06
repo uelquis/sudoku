@@ -5,7 +5,7 @@ import javafx.util.Pair;
 
 import java.util.ArrayList;
 
-public sealed interface SudokuGame permits GameController {
+sealed interface SudokuCell permits Cell {
 
     enum ChunkPositions {
         _00(new Pair<>(0,0)),
@@ -27,11 +27,9 @@ public sealed interface SudokuGame permits GameController {
         }
     }
 
-    Pair<Integer, Integer> getCellPosition(Node cell);
+    Pair<Integer, Integer> getPosition();
 
-    Node getCellbyPosition(Pair<Integer, Integer> pos);
+    ArrayList<Node> getRow();
 
-    ArrayList<Node> getRowFromPosition(Pair<Integer, Integer> pos);
-
-    ArrayList<Node> getColumnFromPosition(Pair<Integer, Integer> pos);
+    ArrayList<Node> getColumn();
 }
