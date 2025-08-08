@@ -1,6 +1,7 @@
 package dev.uelquis.sudoku.ui.controllers;
 
 import javafx.scene.Node;
+import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.util.Pair;
 import lombok.val;
@@ -49,6 +50,18 @@ final class Cell implements SudokuCell {
         return num == null ? 0 : num;
     }
 
+    public void setNumber(int number) {
+        ((Label)this.node).setText(Integer.toString(number));
+    }
+
+    public void setStyle(String style) {
+        this.node.setStyle(style);
+    }
+
+    public GridPane getChunk() {
+        return (GridPane) this.node.getParent();
+    }
+
     @Override
     public Pair<Integer, Integer> getPosition() {
         /*
@@ -62,18 +75,18 @@ final class Cell implements SudokuCell {
          * */
 
         val chunkPosition = new Pair<>(
-                this.validateInteger(GridPane.getRowIndex(this.node.getParent())),
-                this.validateInteger(GridPane.getColumnIndex(this.node.getParent()))
+            this.validateInteger(GridPane.getRowIndex(this.node.getParent())),
+            this.validateInteger(GridPane.getColumnIndex(this.node.getParent()))
         );
 
         val cellPosition = new Pair<>(
-                this.validateInteger(GridPane.getRowIndex(this.node)),
-                this.validateInteger(GridPane.getColumnIndex(this.node))
+            this.validateInteger(GridPane.getRowIndex(this.node)),
+            this.validateInteger(GridPane.getColumnIndex(this.node))
         );
 
         val chunk = Arrays.stream(values())
-                .filter(pos -> chunkPosition.equals(pos.value))
-                .findFirst().get();
+            .filter(pos -> chunkPosition.equals(pos.value))
+            .findFirst().get();
 
         return switch (chunk) {
             case _00 -> cellPosition;
@@ -89,8 +102,6 @@ final class Cell implements SudokuCell {
             case _22 -> offsetCellPosition(6, 6, cellPosition);
         };
     }
-
-
 
     @Override
     public ArrayList<Node> getRow() {
