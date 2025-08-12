@@ -35,7 +35,9 @@ public final class GameController implements Initializable, SudokuGame {
     public GridPane sudokuGrid;
 
     @FXML @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {}
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        initCells(this.sudokuGrid);
+    }
 
     @FXML
     public void onCellClick(MouseEvent event) {
@@ -101,6 +103,8 @@ public final class GameController implements Initializable, SudokuGame {
 
         val number = parseNumber(key);
         if(number == 0) return;
+
+        if(selectedCell.getNumber() != 0) return;
 
         selectedCell.setNumber(number);
     }

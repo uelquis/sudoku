@@ -4,6 +4,7 @@ import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.util.Pair;
+import lombok.Getter;
 import lombok.val;
 
 import java.util.ArrayList;
@@ -14,7 +15,7 @@ import static dev.uelquis.sudoku.ui.controllers.SudokuCell.ChunkPositions.*;
 
 final class Cell implements SudokuCell {
 
-    public static Node getCellFromPosition(Pair<Integer, Integer> pos, GridPane sudokuGrid) {
+    public static Cell getCellFromPosition(Pair<Integer, Integer> pos, GridPane sudokuGrid) {
         if(pos.getKey() < 0 || pos.getKey() > 8)
             throw new IllegalArgumentException("Row position must be between 0 and 8");
 
@@ -31,9 +32,10 @@ final class Cell implements SudokuCell {
             node.set(_node);
         });
 
-        return node.get();
+        return new Cell(node.get(), sudokuGrid);
     }
 
+    @Getter
     private final Node node;
     private final GridPane sudokuGrid;
 
@@ -48,6 +50,14 @@ final class Cell implements SudokuCell {
 
     private int validateInteger(Integer num) {
         return num == null ? 0 : num;
+    }
+
+    public int getNumber() {
+        val text = ((Label)this.node).getText();
+
+        if(text.isEmpty()) return 0;
+
+        return Integer.parseInt(text);
     }
 
     public void setNumber(int number) {
@@ -113,7 +123,7 @@ final class Cell implements SudokuCell {
         }
 
         positions.forEach(position -> {
-            row.add(Cell.getCellFromPosition(position, this.sudokuGrid));
+            row.add(Cell.getCellFromPosition(position, this.sudokuGrid).getNode());
         });
 
         return row;
@@ -129,7 +139,7 @@ final class Cell implements SudokuCell {
         }
 
         positions.forEach(position -> {
-            column.add(Cell.getCellFromPosition(position, this.sudokuGrid));
+            column.add(Cell.getCellFromPosition(position, this.sudokuGrid).getNode());
         });
 
         return column;

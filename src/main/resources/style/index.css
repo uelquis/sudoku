@@ -38,12 +38,10 @@
     -fx-alignment: center;
     -fx-pref-width: 66px;
     -fx-pref-height: 66px;
-    -fx-font-size: 1em;
+    -fx-font-size: 1.5em;
     -fx-text-alignment: center;
     -fx-border-color: #b5b8bb;
 }
-
-
 
 .chunk {
     -fx-border-color: #00a0ff;

@@ -34,15 +34,15 @@
              <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
            </rowConstraints>
             <children>
-               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" />
-               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="1" />
-               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.rowIndex="1" />
-               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="2" />
-               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.rowIndex="2" />
-               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" />
+               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="1" />
+               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.rowIndex="1" />
+               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="2" />
+               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.rowIndex="2" />
+               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="2" GridPane.rowIndex="2" />
             </children>
          </GridPane>
          <GridPane layoutX="210.0" layoutY="10.0" styleClass="chunk" GridPane.columnIndex="2" GridPane.rowIndex="1">
@@ -57,15 +57,15 @@
                <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" />
-               <Label layoutX="11.0" layoutY="11.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="2" />
-               <Label layoutX="77.0" layoutY="11.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="1" />
-               <Label layoutX="77.0" layoutY="11.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.rowIndex="1" />
-               <Label layoutX="11.0" layoutY="77.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-               <Label layoutX="77.0" layoutY="77.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-               <Label layoutX="143.0" layoutY="77.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.rowIndex="2" />
-               <Label layoutX="11.0" layoutY="143.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-               <Label layoutX="77.0" layoutY="143.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" />
+               <Label layoutX="11.0" layoutY="11.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="2" />
+               <Label layoutX="77.0" layoutY="11.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="1" />
+               <Label layoutX="77.0" layoutY="11.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.rowIndex="1" />
+               <Label layoutX="11.0" layoutY="77.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               <Label layoutX="77.0" layoutY="77.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+               <Label layoutX="143.0" layoutY="77.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.rowIndex="2" />
+               <Label layoutX="11.0" layoutY="143.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               <Label layoutX="77.0" layoutY="143.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="2" GridPane.rowIndex="2" />
             </children>
          </GridPane>
          <GridPane layoutX="410.0" layoutY="210.0" styleClass="chunk" GridPane.columnIndex="1" GridPane.rowIndex="1">
@@ -80,15 +80,15 @@
                <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" />
-               <Label layoutX="11.0" layoutY="11.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="2" />
-               <Label layoutX="77.0" layoutY="11.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="1" />
-               <Label layoutX="77.0" layoutY="11.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.rowIndex="1" />
-               <Label layoutX="11.0" layoutY="77.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-               <Label layoutX="77.0" layoutY="77.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-               <Label layoutX="143.0" layoutY="77.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.rowIndex="2" />
-               <Label layoutX="11.0" layoutY="143.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-               <Label layoutX="77.0" layoutY="143.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" />
+               <Label layoutX="11.0" layoutY="11.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="2" />
+               <Label layoutX="77.0" layoutY="11.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="1" />
+               <Label layoutX="77.0" layoutY="11.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.rowIndex="1" />
+               <Label layoutX="11.0" layoutY="77.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               <Label layoutX="77.0" layoutY="77.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+               <Label layoutX="143.0" layoutY="77.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.rowIndex="2" />
+               <Label layoutX="11.0" layoutY="143.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               <Label layoutX="77.0" layoutY="143.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="2" GridPane.rowIndex="2" />
             </children>
          </GridPane>
          <GridPane layoutX="210.0" layoutY="210.0" styleClass="chunk" GridPane.columnIndex="2" GridPane.rowIndex="2">
@@ -103,15 +103,15 @@
                <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" />
-               <Label layoutX="11.0" layoutY="11.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="2" />
-               <Label layoutX="77.0" layoutY="11.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="1" />
-               <Label layoutX="77.0" layoutY="11.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.rowIndex="1" />
-               <Label layoutX="11.0" layoutY="77.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-               <Label layoutX="77.0" layoutY="77.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-               <Label layoutX="143.0" layoutY="77.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.rowIndex="2" />
-               <Label layoutX="11.0" layoutY="143.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-               <Label layoutX="77.0" layoutY="143.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" />
+               <Label layoutX="11.0" layoutY="11.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="2" />
+               <Label layoutX="77.0" layoutY="11.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="1" />
+               <Label layoutX="77.0" layoutY="11.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.rowIndex="1" />
+               <Label layoutX="11.0" layoutY="77.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               <Label layoutX="77.0" layoutY="77.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+               <Label layoutX="143.0" layoutY="77.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.rowIndex="2" />
+               <Label layoutX="11.0" layoutY="143.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               <Label layoutX="77.0" layoutY="143.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="2" GridPane.rowIndex="2" />
             </children>
          </GridPane>
          <GridPane layoutX="410.0" layoutY="410.0" styleClass="chunk" GridPane.columnIndex="1" GridPane.rowIndex="2">
@@ -126,15 +126,15 @@
                <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" />
-               <Label layoutX="11.0" layoutY="11.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="2" />
-               <Label layoutX="77.0" layoutY="11.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="1" />
-               <Label layoutX="77.0" layoutY="11.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.rowIndex="1" />
-               <Label layoutX="11.0" layoutY="77.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-               <Label layoutX="77.0" layoutY="77.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-               <Label layoutX="143.0" layoutY="77.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.rowIndex="2" />
-               <Label layoutX="11.0" layoutY="143.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-               <Label layoutX="77.0" layoutY="143.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" />
+               <Label layoutX="11.0" layoutY="11.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="2" />
+               <Label layoutX="77.0" layoutY="11.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="1" />
+               <Label layoutX="77.0" layoutY="11.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.rowIndex="1" />
+               <Label layoutX="11.0" layoutY="77.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               <Label layoutX="77.0" layoutY="77.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+               <Label layoutX="143.0" layoutY="77.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.rowIndex="2" />
+               <Label layoutX="11.0" layoutY="143.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               <Label layoutX="77.0" layoutY="143.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="2" GridPane.rowIndex="2" />
             </children>
          </GridPane>
          <GridPane layoutX="210.0" layoutY="410.0" styleClass="chunk" GridPane.rowIndex="1">
@@ -149,15 +149,15 @@
                <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" />
-               <Label layoutX="11.0" layoutY="11.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="2" />
-               <Label layoutX="77.0" layoutY="11.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="1" />
-               <Label layoutX="77.0" layoutY="11.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.rowIndex="1" />
-               <Label layoutX="11.0" layoutY="77.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-               <Label layoutX="77.0" layoutY="77.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-               <Label layoutX="143.0" layoutY="77.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.rowIndex="2" />
-               <Label layoutX="11.0" layoutY="143.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-               <Label layoutX="77.0" layoutY="143.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" />
+               <Label layoutX="11.0" layoutY="11.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="2" />
+               <Label layoutX="77.0" layoutY="11.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="1" />
+               <Label layoutX="77.0" layoutY="11.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.rowIndex="1" />
+               <Label layoutX="11.0" layoutY="77.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               <Label layoutX="77.0" layoutY="77.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+               <Label layoutX="143.0" layoutY="77.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.rowIndex="2" />
+               <Label layoutX="11.0" layoutY="143.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               <Label layoutX="77.0" layoutY="143.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="2" GridPane.rowIndex="2" />
             </children>
          </GridPane>
          <GridPane layoutX="10.0" layoutY="210.0" styleClass="chunk" GridPane.rowIndex="2">
@@ -172,15 +172,15 @@
                <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" />
-               <Label layoutX="11.0" layoutY="11.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="2" />
-               <Label layoutX="77.0" layoutY="11.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="1" />
-               <Label layoutX="77.0" layoutY="11.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.rowIndex="1" />
-               <Label layoutX="11.0" layoutY="77.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-               <Label layoutX="77.0" layoutY="77.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-               <Label layoutX="143.0" layoutY="77.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.rowIndex="2" />
-               <Label layoutX="11.0" layoutY="143.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-               <Label layoutX="77.0" layoutY="143.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" />
+               <Label layoutX="11.0" layoutY="11.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="2" />
+               <Label layoutX="77.0" layoutY="11.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="1" />
+               <Label layoutX="77.0" layoutY="11.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.rowIndex="1" />
+               <Label layoutX="11.0" layoutY="77.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               <Label layoutX="77.0" layoutY="77.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+               <Label layoutX="143.0" layoutY="77.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.rowIndex="2" />
+               <Label layoutX="11.0" layoutY="143.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               <Label layoutX="77.0" layoutY="143.0" onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="2" GridPane.rowIndex="2" />
             </children>
          </GridPane>
          <GridPane layoutX="10.0" layoutY="10.0" styleClass="chunk" GridPane.columnIndex="2">
@@ -195,15 +195,15 @@
                <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" />
-               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="1" />
-               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.rowIndex="1" />
-               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="2" />
-               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.rowIndex="2" />
-               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" />
+               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="1" />
+               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.rowIndex="1" />
+               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="2" />
+               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.rowIndex="2" />
+               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="2" GridPane.rowIndex="2" />
             </children>
          </GridPane>
          <GridPane layoutX="410.0" layoutY="10.0" styleClass="chunk" GridPane.columnIndex="1">
@@ -218,15 +218,15 @@
                <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" />
-               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="1" />
-               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.rowIndex="1" />
-               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="2" />
-               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.rowIndex="2" />
-               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" />
+               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="1" />
+               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.rowIndex="1" />
+               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="2" />
+               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.rowIndex="2" />
+               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               <Label onMouseClicked="#onCellClick" styleClass="sudoku_cell" GridPane.columnIndex="2" GridPane.rowIndex="2" />
             </children>
          </GridPane>
       </children></GridPane>
