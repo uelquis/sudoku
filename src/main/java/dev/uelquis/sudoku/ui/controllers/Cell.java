@@ -5,10 +5,12 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.util.Pair;
 import lombok.Getter;
+import lombok.SneakyThrows;
 import lombok.val;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Objects;
 import java.util.concurrent.atomic.AtomicReference;
 
 import static dev.uelquis.sudoku.ui.controllers.SudokuCell.ChunkPositions.*;
@@ -16,6 +18,8 @@ import static dev.uelquis.sudoku.ui.controllers.SudokuCell.ChunkPositions.*;
 //https://pt.wikipedia.org/wiki/Sudoku
 
 final class Cell implements SudokuCell {
+
+    private record CellData(boolean isFinal) {}
 
     public static Cell getCellFromPosition(Pair<Integer, Integer> pos, GridPane sudokuGrid) {
         if(pos.getKey() < 0 || pos.getKey() > 8)
@@ -46,6 +50,17 @@ final class Cell implements SudokuCell {
         this.sudokuGrid = sudokuGrid;
     }
 
+    public void setFinal(boolean isFinal) {
+        this.node.setUserData(new CellData(true));
+    }
+
+    public boolean isFinal() {
+        val data = this.node.getUserData();
+        if(Objects.isNull(data)) return false;
+
+        return ((CellData)data).isFinal;
+    }
+
     private Pair<Integer, Integer> offsetCellPosition(int offsetRow, int offsetColumn, Pair<Integer, Integer> pos) {
         return new Pair<>(pos.getKey() + offsetRow, pos.getValue() + offsetColumn);
     }
@@ -62,8 +77,14 @@ final class Cell implements SudokuCell {
         return Integer.parseInt(text);
     }
 
+    @SneakyThrows
     public void setNumber(int number) {
-        ((Label)this.node).setText(Integer.toString(number));
+        if(this.isFinal()) throw new Exception("this cell is final!");
+
+        val label = ((Label)this.node);
+
+        if(number == 0) label.setText("");
+        else label.setText(Integer.toString(number));
     }
 
     public void setStyle(String style) {

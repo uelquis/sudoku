@@ -1,7 +1,6 @@
 package dev.uelquis.sudoku;
 
 import dev.uelquis.sudoku.ui.controllers.GameController;
-import dev.uelquis.sudoku.ui.controllers.SudokuGame;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyEvent;
@@ -31,7 +30,11 @@ public class SceneBuilder {
             gameScene.addEventHandler(KeyEvent.KEY_PRESSED, GameController::onKeyPressed);
 
             return gameScene;
-        } catch (IOException e) { System.out.printf("failed to get %s\n", e.getMessage()); }
+        } catch (IOException e) {
+            System.out.println("failed to get" + e.getMessage());
+
+            System.out.println("caused by\n" + e.getCause());
+        }
 
         return null;
     }

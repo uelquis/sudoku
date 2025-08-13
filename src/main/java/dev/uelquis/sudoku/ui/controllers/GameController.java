@@ -28,6 +28,8 @@ public final class GameController implements Initializable, SudokuGame {
     private static ArrayList<Node> selectedColumn = null;
     private static GridPane selectedChunk = null;
 
+    public static GameState state = GameState.NOT_STARTED;
+
     @Getter
     private static Cell selectedCell = null;
 
@@ -37,6 +39,8 @@ public final class GameController implements Initializable, SudokuGame {
     @FXML @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         initCells(this.sudokuGrid);
+
+        state = GameState.UNFINISHED;
     }
 
     @FXML
@@ -46,7 +50,6 @@ public final class GameController implements Initializable, SudokuGame {
         // paint cell selection
         selectCell(cell);
 
-        //validateCell();
     }
 
     private void selectCell(Cell cell) {
@@ -81,19 +84,24 @@ public final class GameController implements Initializable, SudokuGame {
     }
 
     public static void onKeyPressed(KeyEvent key) {
-        if(!isNumeric(key)) return;
-
         val selectedCell = GameController.getSelectedCell();
         if(Objects.isNull(selectedCell)) return;
+
+        if(isDelete(key) && !selectedCell.isFinal()) {
+            selectedCell.setNumber(0);
+            return;
+        }
+
+        if(!isNumeric(key)) return;
 
         val number = parseNumber(key);
         if(number == 0) return;
 
-        if(selectedCell.getNumber() != 0) return;
+        if(selectedCell.isFinal()) return;
 
         selectedCell.setNumber(number);
 
-        // cell validation works, but it doesn't help the user find a solution!
+        // cell validation works, but it doesn't directly help the user find a solution!
         System.out.println(CellValidator.validate(selectedCell)? "cell is valid" : "cell is not valid");
     }
 
@@ -126,5 +134,9 @@ public final class GameController implements Initializable, SudokuGame {
                  KeyCode.NUMPAD9 -> true;
             default -> false;
         };
+    }
+
+    private static boolean isDelete(KeyEvent key) {
+        return key.getCode() == KeyCode.DELETE || key.getCode() == KeyCode.BACK_SPACE;
     }
 }
