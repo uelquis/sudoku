@@ -80,21 +80,6 @@ public final class GameController implements Initializable, SudokuGame {
         cell.setStyle("-fx-background-color: #fffe4e;");
     }
 
-    @Override
-    public boolean validateChunk() {
-        return false;
-    }
-
-    @Override
-    public boolean validateColumn() {
-        return false;
-    }
-
-    @Override
-    public boolean validateRow() {
-        return false;
-    }
-
     public static void onKeyPressed(KeyEvent key) {
         if(!isNumeric(key)) return;
 
@@ -107,6 +92,9 @@ public final class GameController implements Initializable, SudokuGame {
         if(selectedCell.getNumber() != 0) return;
 
         selectedCell.setNumber(number);
+
+        // cell validation works, but it doesn't help the user find a solution!
+        System.out.println(CellValidator.validate(selectedCell)? "cell is valid" : "cell is not valid");
     }
 
     private static int parseNumber(KeyEvent key) {

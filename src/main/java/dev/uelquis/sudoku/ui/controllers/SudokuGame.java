@@ -54,14 +54,4 @@ sealed public interface SudokuGame permits GameController {
         Cell.getCellFromPosition(new Pair<>(8,7), sudokuGrid).setNumber(7);
         Cell.getCellFromPosition(new Pair<>(8,8), sudokuGrid).setNumber(9);
     }
-
-    default boolean validateCell() {
-        return validateChunk() && validateColumn() && validateRow();
-    }
-
-    boolean validateChunk();
-
-    boolean validateColumn();
-
-    boolean validateRow();
 }

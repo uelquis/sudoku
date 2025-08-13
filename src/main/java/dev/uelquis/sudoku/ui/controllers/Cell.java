@@ -13,6 +13,8 @@ import java.util.concurrent.atomic.AtomicReference;
 
 import static dev.uelquis.sudoku.ui.controllers.SudokuCell.ChunkPositions.*;
 
+//https://pt.wikipedia.org/wiki/Sudoku
+
 final class Cell implements SudokuCell {
 
     public static Cell getCellFromPosition(Pair<Integer, Integer> pos, GridPane sudokuGrid) {
