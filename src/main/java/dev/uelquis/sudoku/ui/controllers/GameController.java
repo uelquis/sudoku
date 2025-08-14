@@ -54,33 +54,56 @@ public final class GameController implements Initializable, SudokuGame {
 
     private void selectCell(Cell cell) {
 
-        if(!Objects.isNull(selectedChunk)) {
-            selectedChunk.getChildren().forEach(n -> n.setStyle("-fx-background-color: #e9ecef;"));
-        }
+        val finalCellDefaultStyle = String.format("""
+            -fx-background-color: #e9ecef;
+            -fx-text-fill: %s;
+        """, "#008a5b");
 
-        if(!Objects.isNull(selectedRow)) {
-            selectedRow.forEach(n -> n.setStyle("-fx-background-color: #e9ecef;"));
-        }
+        val finalCellHighlightedtStyle = String.format("""
+            -fx-background-color: #90e8ff;
+            -fx-text-fill: %s;
+        """, "#008a5b");
 
-        if(!Objects.isNull(selectedColumn)) {
-            selectedColumn.forEach(n -> n.setStyle("-fx-background-color: #e9ecef;"));
-        }
+        if(!Objects.isNull(selectedChunk)) selectedChunk.getChildren().forEach(n -> {
+            if(Objects.isNull(n.getUserData())) n.setStyle("-fx-background-color: #e9ecef;");
+            else n.setStyle(finalCellDefaultStyle);
+        });
+
+        if(!Objects.isNull(selectedRow)) selectedRow.forEach(n -> {
+            if(Objects.isNull(n.getUserData())) n.setStyle("-fx-background-color: #e9ecef;");
+            else n.setStyle(finalCellDefaultStyle);
+        });
+
+        if(!Objects.isNull(selectedColumn)) selectedColumn.forEach(n -> {
+            if(Objects.isNull(n.getUserData())) n.setStyle("-fx-background-color: #e9ecef;");
+            else n.setStyle(finalCellDefaultStyle);
+        });
 
         selectedCell = cell;
         selectedChunk = cell.getChunk();
         selectedRow = cell.getRow();
         selectedColumn = cell.getColumn();
 
-        cell.getChunk().getChildren()
-            .forEach(n -> n.setStyle("-fx-background-color: #90e8ff;"));
+        cell.getChunk().getChildren().forEach(n -> {
+            if(Objects.isNull(n.getUserData())) n.setStyle("-fx-background-color: #90e8ff;");
+            else n.setStyle(finalCellHighlightedtStyle);
+        });
 
-        cell.getRow()
-            .forEach(n -> n.setStyle("-fx-background-color: #90e8ff;"));
+        cell.getRow().forEach(n -> {
+            if(Objects.isNull(n.getUserData())) n.setStyle("-fx-background-color: #90e8ff;");
+            else n.setStyle(finalCellHighlightedtStyle);
+        });
 
-        cell.getColumn()
-            .forEach(n -> n.setStyle("-fx-background-color: #90e8ff;"));
+        cell.getColumn().forEach(n -> {
+            if(Objects.isNull(n.getUserData())) n.setStyle("-fx-background-color: #90e8ff;");
+            else n.setStyle(finalCellHighlightedtStyle);
+        });
 
-        cell.setStyle("-fx-background-color: #fffe4e;");
+        if (cell.isFinal()) {
+            cell.setStyle(String.format("-fx-background-color: #fffe4e; -fx-text-fill: %s", "#008a5b"));
+        } else {
+            cell.setStyle("-fx-background-color: #fffe4e;");
+        }
     }
 
     public static void onKeyPressed(KeyEvent key) {
@@ -97,7 +120,7 @@ public final class GameController implements Initializable, SudokuGame {
         val number = parseNumber(key);
         if(number == 0) return;
 
-        if(selectedCell.isFinal()) return;
+        if(selectedCell.isFinal() || selectedCell.getNumber() != 0) return;
 
         selectedCell.setNumber(number);
 

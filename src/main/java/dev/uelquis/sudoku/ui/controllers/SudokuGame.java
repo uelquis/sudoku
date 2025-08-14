@@ -76,6 +76,8 @@ sealed public interface SudokuGame permits GameController {
         initValues.forEach((pos, value) -> {
             Cell.getCellFromPosition(pos, sudokuGrid).setNumber(value);
             Cell.getCellFromPosition(pos, sudokuGrid).setFinal(true);
+
+            Cell.getCellFromPosition(pos, sudokuGrid).setStyle("-fx-text-fill: #008a5b;");
         });
     }
 }
