@@ -21,6 +21,16 @@ final class Cell implements SudokuCell {
 
     private record CellData(boolean isFinal) {}
 
+    public static ArrayList<Cell> getAllCells(GridPane sudokuGrid) {
+        val cells = new ArrayList<Cell>();
+
+        sudokuGrid.getChildren().stream()
+            .flatMap(chunk -> ((GridPane)chunk).getChildren().stream())
+            .forEach(node -> cells.add(new Cell(node, sudokuGrid)));
+
+        return cells;
+    }
+
     public static Cell getCellFromPosition(Pair<Integer, Integer> pos, GridPane sudokuGrid) {
         if(pos.getKey() < 0 || pos.getKey() > 8)
             throw new IllegalArgumentException("Row position must be between 0 and 8");

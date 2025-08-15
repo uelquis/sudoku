@@ -1,12 +1,15 @@
 package dev.uelquis.sudoku.ui.controllers;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.control.Button;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import lombok.Getter;
 import lombok.val;
 
@@ -36,11 +39,22 @@ public final class GameController implements Initializable, SudokuGame {
     @FXML
     public GridPane sudokuGrid;
 
+    @FXML
+    public HBox toolbar;
+
     @FXML @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         initCells(this.sudokuGrid);
 
         state = GameState.UNFINISHED;
+    }
+
+    public void clearBoard(ActionEvent event) {
+        Cell.getAllCells(sudokuGrid).forEach(cell -> {
+            if(cell.isFinal()) return;
+
+            cell.setNumber(0);
+        });
     }
 
     @FXML
